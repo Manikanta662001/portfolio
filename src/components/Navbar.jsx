@@ -16,7 +16,13 @@ const FlexBetween = styled(Box)({
   justifyContent: "space-between",
   alignItems: "center",
 });
-const tabs = ["Home", "About me", "Skills", "Projects", "Contact"];
+const tabs = [
+  { label: "Home", id: "home" },
+  { label: "About Me", id: "about" },
+  { label: "Skills", id: "skills" },
+  { label: "Projects", id: "projects" },
+  { label: "Contact me", id: "contact me" },
+];
 const Navbar = () => {
   const theme = useTheme();
   const isNonMobileScreen = useMediaQuery("(min-width: 1000px)");
@@ -29,6 +35,9 @@ const Navbar = () => {
       p="1rem 6%"
       sx={{
         backgroundColor: theme.palette.background.alt,
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
       }}
     >
       <FlexBetween gap="1.75rem">
@@ -44,7 +53,13 @@ const Navbar = () => {
         <FlexBetween gap="2rem">
           {tabs.map((tab) => (
             <Typography
-              key={tab}
+              key={tab.id}
+              onClick={() => {
+                const section = document.getElementById(tab.id);
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
               sx={{
                 fontSize: "1rem",
                 "&:hover": {
@@ -53,7 +68,7 @@ const Navbar = () => {
                 },
               }}
             >
-              {tab}
+              {tab.label}
             </Typography>
           ))}
           <IconButton
@@ -109,7 +124,7 @@ const Navbar = () => {
           >
             {tabs.map((tab) => (
               <Typography
-                key={tab}
+                key={tab.id}
                 sx={{
                   fontSize: "1rem",
                   "&:hover": {
@@ -118,7 +133,7 @@ const Navbar = () => {
                   },
                 }}
               >
-                {tab}
+                {tab.label}
               </Typography>
             ))}
           </FlexBetween>

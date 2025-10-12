@@ -6,6 +6,7 @@ function Home() {
   const theme = useTheme();
   return (
     <Box
+      id="home"
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -29,8 +30,8 @@ function Home() {
         <Box mb={3}>
           <img
             src={ManiImg}
-            width={"200px"}
-            height={"200px"}
+            width={"180px"}
+            height={"180px"}
             style={{
               borderRadius: "50%",
               objectFit: "cover",
@@ -66,7 +67,7 @@ function Home() {
               lineHeight: 1.6,
             }}
           >
-            I am a React Js Developer who loves crafting clean, scalable web
+            I am a React JS Developer who loves crafting clean, scalable web
             applications. My goal is to build solutions that offer both
             exceptional performance and a delightful user experience.
           </Typography>
