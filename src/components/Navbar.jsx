@@ -125,6 +125,13 @@ const Navbar = () => {
             {tabs.map((tab) => (
               <Typography
                 key={tab.id}
+                onClick={() => {
+                  const section = document.getElementById(tab.id);
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                    setIsMobileMenuToggled(false);
+                  }
+                }}
                 sx={{
                   fontSize: "1rem",
                   "&:hover": {
