@@ -143,6 +143,17 @@ const Navbar = () => {
                 {tab.label}
               </Typography>
             ))}
+            <IconButton
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            >
+              {theme.palette.mode === "dark" ? (
+                <DarkMode sx={{ fontSize: "25px" }} />
+              ) : (
+                <LightMode
+                  sx={{ color: theme.palette.neutral.dark, fontSize: "25px" }}
+                />
+              )}
+            </IconButton>
           </FlexBetween>
         </Box>
       </Slide>

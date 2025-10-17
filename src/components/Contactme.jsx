@@ -52,7 +52,7 @@ function Contactme() {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "justify",
-        minHeight: "100vh",
+        minHeight: "90vh",
         maxWidth: "80%",
         margin: "auto",
         px: 3,

@@ -1,6 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React from "react";
-import ManiImg from "../assets/mani.jpeg";
 
 function Home() {
   const theme = useTheme();
@@ -29,7 +28,7 @@ function Home() {
       >
         <Box mb={3}>
           <img
-            src={ManiImg}
+            src={"/mani.jpeg"}
             width={"180px"}
             height={"180px"}
             style={{
