@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maniportfolio142.netlify.app/sitemap.xml
