@@ -3,6 +3,20 @@ import React from "react";
 
 function Aboutme() {
   const theme = useTheme();
+  const calculateYOE = () => {
+    const start = new Date("2023-03-21");
+    const end = new Date();
+    let totalMonths =
+      (end.getFullYear() - start.getFullYear()) * 12 +
+      end.getMonth() -
+      start.getMonth();
+    if (end.getDate() < start.getDate()) {
+      totalMonths -= 1;
+    }
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    return Number(`${years}.${months}`);
+  };
   return (
     <Box
       id="about"
@@ -36,7 +50,7 @@ function Aboutme() {
         >
           I'm <strong>Manikanta Gundluri</strong>, a dedicated{" "}
           <strong>React.js Developer</strong> with a passion for creating
-          responsive and high-performance web applications. I have 2.7 Years of
+          responsive and high-performance web applications. I have {calculateYOE()} Years of
           Experience in building responsive, user-friendly web applications. I
           enjoy building clean, modern UIs and solving real-world problems with
           efficient, scalable code.I’ve worked extensively in the banking and

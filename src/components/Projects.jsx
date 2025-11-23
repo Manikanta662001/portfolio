@@ -55,7 +55,7 @@ function Projects() {
         >
           <CardMedia
             sx={{ height: 140 }}
-            image="/social-media-image.PNG"
+            image="/social-media-image.jpg"
             title="social-media"
           />
           <CardContent>

@@ -84,7 +84,10 @@ const Navbar = () => {
           </IconButton>
         </FlexBetween>
       ) : (
-        <IconButton onClick={() => setIsMobileMenuToggled(true)}>
+        <IconButton
+          onClick={() => setIsMobileMenuToggled(true)}
+          aria-label="open navigation menu"
+        >
           <Menu />
         </IconButton>
       )}

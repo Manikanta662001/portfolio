@@ -28,9 +28,11 @@ function Home() {
       >
         <Box mb={3}>
           <img
-            src={"/mani.jpeg"}
+            src={"/mani.jpg"}
             width={"180px"}
             height={"180px"}
+            loading="lazy"
+            alt="Mani Img"
             style={{
               borderRadius: "50%",
               objectFit: "cover",
